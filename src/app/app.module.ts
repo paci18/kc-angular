@@ -8,17 +8,17 @@ function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-
         realm: 'Keycloak-angular-connection',
         url: 'http://localhost:8080/auth',
-        clientId: 'kc-angular'
+        clientId: 'kc-angular',
       },
       initOptions: {
-        //onLoad: 'check-sso',
-        //onLoad: 'login-required',
+        onLoad: 'check-sso',
+        //nLoad: 'login-required',
+        checkLoginIframe: true,
         silentCheckSsoRedirectUri:
-          window.location.origin + '/assets/silent-check-sso.html'
-      }
+          window.location.origin + '/assets/silent-check-sso.html',
+      },
     });
 }
 
@@ -30,9 +30,9 @@ function initializeKeycloak(keycloak: KeycloakService) {
       provide: APP_INITIALIZER,
       useFactory: initializeKeycloak,
       multi: true,
-      deps: [KeycloakService]
-    }
+      deps: [KeycloakService],
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
