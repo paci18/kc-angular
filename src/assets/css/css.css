@@ -19748,3 +19748,11 @@ html[lang="ru"] .ball_flag span.flag-cn {
     display: none;
   }
 }
+.container  {
+  position: relative;
+  width: 50%;
+}
+.container img {
+  width: 5%;
+  height: auto;
+}
