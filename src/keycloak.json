@@ -1,6 +1,6 @@
 {
   "realm": "Keycloak-angular-connection",
-  "auth-server-url": "http://localhost:8080/auth/",
+  "auth-server-url": "http://localhost:8080",
   "ssl-required": "external",
   "resource": "Keycloak-javascript",
   "public-client": true,
