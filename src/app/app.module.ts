@@ -13,12 +13,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
     keycloak.init({
       config: {
         realm: 'Keycloak-angular-connection',
-        url: 'http://localhost:8080/auth',
+        url: 'http://localhost:8080',
         clientId: 'kc-angular',
       },
       initOptions: {
         onLoad: 'check-sso',
-        //nLoad: 'login-required',
+        //onLoad: 'login-required',
         checkLoginIframe: true,
         silentCheckSsoRedirectUri:
           window.location.origin + '/assets/silent-check-sso.html',
