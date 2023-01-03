@@ -1,27 +1,3 @@
-<!--<div>-->
-<!--<html xmlns="http://www.w3.org/1999/html">-->
-<!--<body>-->
-<!--<span class="icon-user"></span>-->
-<!--  </button>-->
-<!--    <script>-->
-
-<!--      function openMenu(){-->
-<!--   //window.open("popup-information.html");-->
-<!--        let myDialog = document.getElementById("myDialog");-->
-<!--        myDialog.showModal();-->
-
-<!--       // var btn = document.getElementById("btnUser");-->
-<!--      }-->
-<!--    </script>-->
-
-<!--</body>-->
-<!--</html>-->
-<!--</div>-->
-
-
-
-
-<!--<button *ngIf="isLoggedIn" type="button" (click)="logout()">Log out</button>-->
 
   <li class="box_User {{popUpActive}} " (click)="tooglePopUp()"><span class="icon-user subbed" title="User Menu"></span>
 
@@ -31,55 +7,54 @@
           <form class="b_form" >
             <div class="inputs">
 
-<!--                <button *ngIf="registration" id="registration" type="button" (click)="registration()">Registration</button>-->
-
-
-<!--                <button *ngIf="logout"  id="login" type="button" (click)="login()">Login</button>-->
                   <input type="button" *ngIf="!isLoggedIn" id="login" type="button" (click)="login()" value="Login">
-
               <input type="button"   *ngIf="!isLoggedIn" id="registration" (click)="registration()" value="Registration">
               <div *ngIf="isLoggedIn">
                 <h1> Welcome  user  </h1>
                 <ng-container *ngIf="userProfile">
                 <table>
+                  <div>
                     <tr *ngIf="userProfile.username">
                       <th scope="row">Username</th>
                       <td>{{ userProfile.username }}</td>
                     </tr>
-                  <td>
-                  </td>
+                  </div>
+
+                  <div>
+
+                    <td>
                     <tr *ngIf="userProfile.firstName">
                       <th scope="row">First name</th>
                       <td>{{userProfile.firstName}}</td>
                     </tr>
+                    </td>
+                  </div>
+                  <div>
+                    <td>
                     <tr *ngIf="userProfile.lastName">
                       <th scope="row">Last Name</th>
                       <td>{{ userProfile.lastName }}</td>
                     </tr>
+                    </td>
+                  </div>
+                  <div>
+                    <td>
                     <tr *ngIf="userProfile.email">
                       <th scope="row">E-mail</th>
                       <td>{{ userProfile.email }}</td>
                     </tr>
+                    </td>
+                  </div>
                 </table>
                   </ng-container>
-
               </div>
+              <div>
+                <td>
                 <input type="button" *ngIf="isLoggedIn" id="logout" type="button" (click)="logout()" value="Logout">
-<!--                <button *ngIf="isLoggedIn" id="logout" type="button" (click)="logout()">Log out<span class="icon-logout"></span></button>-->
-
+                </td>
+              </div>
             </div>
 
-<!--            <script>-->
-<!--             function disableButton(){-->
-<!--               let buttonRegistrazion = document.getElementById("registration");-->
-<!--               let buttonLogin = document.getElementById("login");-->
-<!--               let buttonLogout = document.getElementById("logout");-->
-<!--               buttonLogin.addEventListener('click', () => {-->
-<!--                buttonRegistrazion.style.display = 'none';-->
-<!--               });-->
-<!--             }-->
-
-<!--            </script>-->
           </form>
         </div>
       </div>
