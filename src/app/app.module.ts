@@ -14,7 +14,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
       config: {
         realm: 'Keycloak-angular-connection',
         url: 'http://localhost:8080',
-        clientId: 'kc-angular',
+        clientId: 'kc-sea',
       },
       initOptions: {
         onLoad: 'check-sso',

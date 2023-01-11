@@ -6,7 +6,6 @@ import { KeycloakProfile } from 'keycloak-js';
 @Component({
   selector: 'app-root',
 templateUrl: './popup-component.html',
- // templateUrl: './popup-information.html'
 })
 export class LoginComponent implements OnInit {
 

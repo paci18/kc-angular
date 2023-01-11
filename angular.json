@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kc-angular": {
+    "kc-sea": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kc-angular",
+            "outputPath": "dist/kc-sea",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "kc-angular:build:production"
+              "browserTarget": "kc-sea:build:production"
             },
             "development": {
-              "browserTarget": "kc-angular:build:development"
+              "browserTarget": "kc-sea:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kc-angular:build"
+            "browserTarget": "kc-sea:build"
           }
         },
         "test": {
